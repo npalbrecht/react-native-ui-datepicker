@@ -36,9 +36,6 @@ const TimeSelector = () => {
     [date, onSelectDate]
   );
 
-
-Temp patch : replace the return code in TimeSelector.tsx into :
-
   return (
     <View style={styles.container} testID="time-selector">
       {Platform.OS == 'ios' && (
