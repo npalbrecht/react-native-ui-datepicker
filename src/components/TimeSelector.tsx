@@ -63,6 +63,7 @@ const TimeSelector = () => {
       </View>
     </View>
   );
+}
 
 
 const styles = StyleSheet.create({
