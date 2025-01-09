@@ -36,8 +36,17 @@ const TimeSelector = () => {
     [date, onSelectDate]
   );
 
+
+Temp patch : replace the return code in TimeSelector.tsx into :
+
   return (
     <View style={styles.container} testID="time-selector">
+      {Platform.OS == 'ios' && (
+        <Text style={{
+          fontFamily: 'MRegular',
+          fontSize: 16
+        }}>Fais défiler pour sélectionner une heure</Text>
+      )}
       <View style={styles.timePickerContainer}>
         <View style={styles.wheelContainer}>
           <Wheel value={hour} items={hours} setValue={handleChangeHour} />
@@ -57,7 +66,7 @@ const TimeSelector = () => {
       </View>
     </View>
   );
-};
+
 
 const styles = StyleSheet.create({
   container: {
