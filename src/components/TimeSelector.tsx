@@ -38,12 +38,10 @@ const TimeSelector = () => {
 
   return (
     <View style={styles.container} testID="time-selector">
-      {Platform.OS == 'ios' && (
         <Text style={{
           fontFamily: 'MRegular',
           fontSize: 16
         }}>Fais défiler pour sélectionner une heure</Text>
-      )}
       <View style={styles.timePickerContainer}>
         <View style={styles.wheelContainer}>
           <Wheel value={hour} items={hours} setValue={handleChangeHour} />
